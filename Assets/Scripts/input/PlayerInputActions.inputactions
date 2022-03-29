@@ -2,13 +2,13 @@
     "name": "PlayerInputActions",
     "maps": [
         {
-            "name": "Action map car",
-            "id": "c224eac0-2f68-48fe-b766-e477b02457d6",
+            "name": "Kart",
+            "id": "ce0de78e-96eb-49b6-905d-752c283a513e",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "New action",
                     "type": "Value",
-                    "id": "99f25e47-cb25-419d-b1f2-a6b8d5b2070b",
+                    "id": "67f65be2-8d30-4447-91a1-4dc93e4fd80a",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -18,56 +18,56 @@
             "bindings": [
                 {
                     "name": "2D Vector",
-                    "id": "3c78277e-bec9-4ff0-adb7-e8798ef5887a",
+                    "id": "002276e5-c939-4fc1-b572-669e3875fbb2",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "New action",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "up",
-                    "id": "b9842638-785e-48af-9f5e-6a0f46a98f0c",
+                    "id": "7772d3b8-2b11-4f75-bf7d-152d44be198f",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
+                    "groups": "PC",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "d9b66b35-95f0-4d42-baf9-9859eda9b66c",
+                    "id": "ad89d880-d4e6-477e-9041-bb5b00a6819f",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
+                    "groups": "PC",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "9937daf7-dd00-4d6b-b1e7-90c72d5abf03",
+                    "id": "09ac3d68-4703-4b21-8385-f0ba61ba7085",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
+                    "groups": "PC",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "48662cc2-ffb2-4cb1-af28-e52ae408306a",
+                    "id": "83cfa800-376d-42ef-a7c8-afc066059f9f",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
-                    "groups": "New control scheme",
-                    "action": "Move",
+                    "groups": "PC",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": true
                 }
@@ -78,6 +78,22 @@
         {
             "name": "New control scheme",
             "bindingGroup": "New control scheme",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "PC",
+            "bindingGroup": "PC",
             "devices": [
                 {
                     "devicePath": "<Keyboard>",

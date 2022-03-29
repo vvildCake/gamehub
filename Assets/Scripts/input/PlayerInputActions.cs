@@ -24,13 +24,13 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     ""name"": ""PlayerInputActions"",
     ""maps"": [
         {
-            ""name"": ""Action map car"",
-            ""id"": ""c224eac0-2f68-48fe-b766-e477b02457d6"",
+            ""name"": ""Kart"",
+            ""id"": ""ce0de78e-96eb-49b6-905d-752c283a513e"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""New action"",
                     ""type"": ""Value"",
-                    ""id"": ""99f25e47-cb25-419d-b1f2-a6b8d5b2070b"",
+                    ""id"": ""67f65be2-8d30-4447-91a1-4dc93e4fd80a"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -40,56 +40,56 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""3c78277e-bec9-4ff0-adb7-e8798ef5887a"",
+                    ""id"": ""002276e5-c939-4fc1-b572-669e3875fbb2"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""New action"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""b9842638-785e-48af-9f5e-6a0f46a98f0c"",
+                    ""id"": ""7772d3b8-2b11-4f75-bf7d-152d44be198f"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""New control scheme"",
-                    ""action"": ""Move"",
+                    ""groups"": ""PC"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""d9b66b35-95f0-4d42-baf9-9859eda9b66c"",
+                    ""id"": ""ad89d880-d4e6-477e-9041-bb5b00a6819f"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""New control scheme"",
-                    ""action"": ""Move"",
+                    ""groups"": ""PC"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""9937daf7-dd00-4d6b-b1e7-90c72d5abf03"",
+                    ""id"": ""09ac3d68-4703-4b21-8385-f0ba61ba7085"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""New control scheme"",
-                    ""action"": ""Move"",
+                    ""groups"": ""PC"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""48662cc2-ffb2-4cb1-af28-e52ae408306a"",
+                    ""id"": ""83cfa800-376d-42ef-a7c8-afc066059f9f"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""New control scheme"",
-                    ""action"": ""Move"",
+                    ""groups"": ""PC"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -112,12 +112,28 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""PC"",
+            ""bindingGroup"": ""PC"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
-        // Action map car
-        m_Actionmapcar = asset.FindActionMap("Action map car", throwIfNotFound: true);
-        m_Actionmapcar_Move = m_Actionmapcar.FindAction("Move", throwIfNotFound: true);
+        // Kart
+        m_Kart = asset.FindActionMap("Kart", throwIfNotFound: true);
+        m_Kart_Newaction = m_Kart.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -174,38 +190,38 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Action map car
-    private readonly InputActionMap m_Actionmapcar;
-    private IActionmapcarActions m_ActionmapcarActionsCallbackInterface;
-    private readonly InputAction m_Actionmapcar_Move;
-    public struct ActionmapcarActions
+    // Kart
+    private readonly InputActionMap m_Kart;
+    private IKartActions m_KartActionsCallbackInterface;
+    private readonly InputAction m_Kart_Newaction;
+    public struct KartActions
     {
         private @PlayerInputActions m_Wrapper;
-        public ActionmapcarActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Actionmapcar_Move;
-        public InputActionMap Get() { return m_Wrapper.m_Actionmapcar; }
+        public KartActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Kart_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Kart; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ActionmapcarActions set) { return set.Get(); }
-        public void SetCallbacks(IActionmapcarActions instance)
+        public static implicit operator InputActionMap(KartActions set) { return set.Get(); }
+        public void SetCallbacks(IKartActions instance)
         {
-            if (m_Wrapper.m_ActionmapcarActionsCallbackInterface != null)
+            if (m_Wrapper.m_KartActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_ActionmapcarActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_ActionmapcarActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_ActionmapcarActionsCallbackInterface.OnMove;
+                @Newaction.started -= m_Wrapper.m_KartActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_KartActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_KartActionsCallbackInterface.OnNewaction;
             }
-            m_Wrapper.m_ActionmapcarActionsCallbackInterface = instance;
+            m_Wrapper.m_KartActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Move.started += instance.OnMove;
-                @Move.performed += instance.OnMove;
-                @Move.canceled += instance.OnMove;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
         }
     }
-    public ActionmapcarActions @Actionmapcar => new ActionmapcarActions(this);
+    public KartActions @Kart => new KartActions(this);
     private int m_NewcontrolschemeSchemeIndex = -1;
     public InputControlScheme NewcontrolschemeScheme
     {
@@ -215,8 +231,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_NewcontrolschemeSchemeIndex];
         }
     }
-    public interface IActionmapcarActions
+    private int m_PCSchemeIndex = -1;
+    public InputControlScheme PCScheme
     {
-        void OnMove(InputAction.CallbackContext context);
+        get
+        {
+            if (m_PCSchemeIndex == -1) m_PCSchemeIndex = asset.FindControlSchemeIndex("PC");
+            return asset.controlSchemes[m_PCSchemeIndex];
+        }
+    }
+    public interface IKartActions
+    {
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }
