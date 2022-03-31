@@ -44,6 +44,24 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Fspd"",
+                    ""type"": ""Button"",
+                    ""id"": ""ae7b7a64-ecab-4c00-a41d-b04400621ae1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sspd"",
+                    ""type"": ""Button"",
+                    ""id"": ""508be077-6ab3-4b41-83bf-93d0702e2ff5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -57,61 +75,6 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""action"": ""ResetPosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""arrow"",
-                    ""id"": ""3a63b9f5-e157-4175-a308-298847a62363"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""6a640434-213a-42c9-b155-b09b902b1474"",
-                    ""path"": ""<Keyboard>/upArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""0ddd9b5b-356a-41f4-90cc-482ea42b4e8d"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""71d4b5c3-45fc-4960-82fd-49e79a4ad548"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""df80d839-309f-499a-a9a1-4696f9d8da2e"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""PC"",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""wasd"",
@@ -169,8 +132,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""2cea8dec-eb9f-4e3c-9f0f-619ecc26d5a1"",
+                    ""name"": ""arrows"",
+                    ""id"": ""8f880efe-cb5d-4a09-895c-5df27304b685"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -181,47 +144,124 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""42c0d5b5-f7d9-4d19-9510-a0451daa8f4a"",
-                    ""path"": ""<XboxOneGamepadAndroid>/select"",
+                    ""id"": ""3e164dc1-69d2-4246-8f44-0a80e4ae0a3c"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PC"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""37f543b0-b6c8-4770-a663-425c404ab01f"",
-                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""id"": ""705e5ea5-b673-4a37-af44-3fc3656b5e5d"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PC"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""d506e1ce-0d14-4e98-af6f-65d5946b6189"",
-                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""id"": ""55f68f26-d872-4387-99bf-bd0d5a3da7fe"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PC"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""a7c9b2eb-130e-4751-aafe-565757e32ce4"",
-                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""id"": ""8633d39a-269a-4ec3-af48-e6f38ec1e43f"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""PC"",
+                    ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""f827d7b2-b7d9-4682-a136-2f7bb5c61366"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""72526394-17c0-476a-8dbc-933e9f7b3b27"",
+                    ""path"": ""<AndroidJoystick>/stick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""816bbdf6-37ac-4865-8d86-bce894f17315"",
+                    ""path"": ""<AndroidJoystick>/stick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""47f9b967-b807-47f3-9226-95b7adbbf92a"",
+                    ""path"": ""<AndroidJoystick>/stick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""14480f09-72b2-4778-838e-9d6c0b9f3027"",
+                    ""path"": ""<AndroidJoystick>/stick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94d2d6c4-61c9-46a1-8d2a-3ad5e83cf36c"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fspd"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb11ef12-eca2-494a-a57b-0ebb8c4d45d7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sspd"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -242,6 +282,17 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isOR"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Joystick"",
+            ""bindingGroup"": ""Joystick"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<AndroidJoystick>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
         }
     ]
 }");
@@ -249,6 +300,8 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         m_Kart = asset.FindActionMap("Kart", throwIfNotFound: true);
         m_Kart_ResetPosition = m_Kart.FindAction("ResetPosition", throwIfNotFound: true);
         m_Kart_Move = m_Kart.FindAction("Move", throwIfNotFound: true);
+        m_Kart_Fspd = m_Kart.FindAction("Fspd", throwIfNotFound: true);
+        m_Kart_Sspd = m_Kart.FindAction("Sspd", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -310,12 +363,16 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     private IKartActions m_KartActionsCallbackInterface;
     private readonly InputAction m_Kart_ResetPosition;
     private readonly InputAction m_Kart_Move;
+    private readonly InputAction m_Kart_Fspd;
+    private readonly InputAction m_Kart_Sspd;
     public struct KartActions
     {
         private @PlayerInputActions m_Wrapper;
         public KartActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @ResetPosition => m_Wrapper.m_Kart_ResetPosition;
         public InputAction @Move => m_Wrapper.m_Kart_Move;
+        public InputAction @Fspd => m_Wrapper.m_Kart_Fspd;
+        public InputAction @Sspd => m_Wrapper.m_Kart_Sspd;
         public InputActionMap Get() { return m_Wrapper.m_Kart; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -331,6 +388,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_KartActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_KartActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_KartActionsCallbackInterface.OnMove;
+                @Fspd.started -= m_Wrapper.m_KartActionsCallbackInterface.OnFspd;
+                @Fspd.performed -= m_Wrapper.m_KartActionsCallbackInterface.OnFspd;
+                @Fspd.canceled -= m_Wrapper.m_KartActionsCallbackInterface.OnFspd;
+                @Sspd.started -= m_Wrapper.m_KartActionsCallbackInterface.OnSspd;
+                @Sspd.performed -= m_Wrapper.m_KartActionsCallbackInterface.OnSspd;
+                @Sspd.canceled -= m_Wrapper.m_KartActionsCallbackInterface.OnSspd;
             }
             m_Wrapper.m_KartActionsCallbackInterface = instance;
             if (instance != null)
@@ -341,6 +404,12 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Fspd.started += instance.OnFspd;
+                @Fspd.performed += instance.OnFspd;
+                @Fspd.canceled += instance.OnFspd;
+                @Sspd.started += instance.OnSspd;
+                @Sspd.performed += instance.OnSspd;
+                @Sspd.canceled += instance.OnSspd;
             }
         }
     }
@@ -354,9 +423,20 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             return asset.controlSchemes[m_PCSchemeIndex];
         }
     }
+    private int m_JoystickSchemeIndex = -1;
+    public InputControlScheme JoystickScheme
+    {
+        get
+        {
+            if (m_JoystickSchemeIndex == -1) m_JoystickSchemeIndex = asset.FindControlSchemeIndex("Joystick");
+            return asset.controlSchemes[m_JoystickSchemeIndex];
+        }
+    }
     public interface IKartActions
     {
         void OnResetPosition(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnFspd(InputAction.CallbackContext context);
+        void OnSspd(InputAction.CallbackContext context);
     }
 }
